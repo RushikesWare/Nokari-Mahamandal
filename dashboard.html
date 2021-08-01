@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/dashboard_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <title>Naukri Mahamandal</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            
+            <button id="open" class="dot-menu btn bg-white" onclick="openNav()">
+                <i class="fa fa-bars" aria-hidden="true" style="font-size: 25px;"></i>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="./assets/img/logo.jpeg" alt="logo" width="100">
+            </a>
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- <ul class="navbar-nav mr-auto ">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" style="border-top: 5px solid #008dc9;">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" style="border-top: 5px solid #ffffff;">Explore</a>
+                    </li>
+                </ul> -->
+            </div>
+            <div class="float-right right-side-button">
+                <label class="dropdown">
+
+                    <div class="dd-button">
+                        <img src="./assets/img/shared-with.png" alt="">
+                    </div>
+
+                    <input type="checkbox" class="dd-input" id="test">
+
+                    <ul class="dd-menu">
+                        <li class="dd-menu-devider">
+                            <a href="#">
+                                <i class="fa fa-user-circle-o" aria-hidden="true"></i> &nbsp;&nbsp;
+                                My Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-sign-out" aria-hidden="true"></i> &nbsp;&nbsp;
+                                Log Out
+                            </a>
+                        </li>
+                        <!-- <li class="divider"></li> -->
+                    </ul>
+
+                </label>
+                <button class="dot-menu btn bg-white">
+                    <img src="./assets/img/dots-menu.png" alt="dots-menu">
+                </button>
+               
+            </div>
+
+        </nav>
+    </header>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="dashboard.html" class="active"> <i class="fa fa-desktop" aria-hidden="true"></i>
+            Dashboard</a>
+        <a href="dash-my-profile.html"> <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+            My Profile</a>
+        <a href="dash-manage-jobs.html"> <i class="fa fa-briefcase" aria-hidden="true"></i>
+            Manage Jobs</a>
+        <a href="dash-reports.html"><i class="fa fa-id-card" aria-hidden="true"></i>
+            Reports</a>
+        <a href="dash-post-new-job.html"><i class="fa fa-heart-o" aria-hidden="true"></i>
+            Post New Job</a>
+        <a href="dash-find-candidates.html"><i class="fa fa-user" aria-hidden="true"></i>
+            Find Candidates</a>
+        <a href="dash-manage-address.html"><i class="fa fa-map-marker" aria-hidden="true"></i>
+            Manage Address</a>
+        <a href="dash-change-password.html"><i class="fa fa-key" aria-hidden="true"></i>
+            Change Password</a>
+    </div>
+
+    <div class="container-fluid mt-3">
+
+        <h4 style="color: #838383; margin-bottom: 0;">Open Positions</h4>
+        <button class="pull-right btn view-all"> View All</button>
+        <div class="row mt-3 open-position-row">
+            <div class="col-lg-4 col-md-6">
+
+                <div class="card  p-3" onclick="window.location.href='dash-candidate-profile.html';"
+                    style="cursor: pointer;">
+                    <h4>Sr. UI Designer <span class="pull-right date-format m-2" style="color: #838383;">18-May-2020
+                        </span></h4>
+                    <hr style="margin-top: -1px; margin-bottom: 0.2rem;">
+                    <div class="row main-row">
+                        <div class="col-md-6">
+                            <p class="remote">
+                                <span><a href="">Remote</a></span>
+                                <span><a href="">Interviewing</a></span>
+                            </p>
+                            <div class="exp-location">
+                                <p><i class="fa fa-briefcase" aria-hidden="true"></i>
+                                    <span> 3+ Years</span>
+                                </p>
+                                <p class=" mt-2">
+                                    <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
+                                    <span class="ml-3"> Mumbai Office</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 right-card">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card one">
+                                        <h6>1</h6>
+                                        <p>New</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <div class="card two">
+                                        <h6>3</h6>
+                                        <p>Interviewed</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card three">
+                                        <h6>2</h6>
+                                        <p>In Review</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card four">
+                                        <h6>1</h6>
+                                        <p>Offered</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mt-1" style="padding: 0; color: #838383;">
+                        <p>
+                            <!-- <img src="./assets/img/shared-with.png" alt="shared with" width="20"> -->
+                        <div id="circles">
+                            Shared with
+                            <div class="circle one"></div>
+                            <div class="circle two"></div>
+                            <div class="circle three"></div>
+                            <span class="three-others"> +3 Others</span>
+                        </div>
+                        </p>
+                        <div class="bottom-sketech">
+                            <p class="mt-1">
+                                <span>Sketch App</span>
+                                <span>Figma</span>
+                                <span>Illustrator</span>
+                                <!-- <span>Photoshop</span> -->
+                            </p>
+                            <p class="user-centric">
+                                <span>User Centric Design</span>
+                                <!-- <span>Design Systems</span> -->
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-6">
+
+                <div class="card  p-3" onclick="window.location.href='dash-candidate-profile.html';"
+                    style="cursor: pointer;">
+                    <h4>Sr. UI Designer <span class="pull-right date-format m-2" style="color: #838383;">18-May-2020
+                        </span></h4>
+                    <hr style="margin-top: -1px; margin-bottom: 0.2rem;">
+                    <div class="row main-row">
+                        <div class="col-md-6">
+                            <p class="remote">
+                                <span><a href="">Remote</a></span>
+                                <span><a href="">Interviewing</a></span>
+                            </p>
+                            <div class="exp-location">
+                                <p><i class="fa fa-briefcase" aria-hidden="true"></i>
+                                    <span> 3+ Years</span>
+                                </p>
+                                <p class=" mt-2">
+                                    <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
+                                    <span class="ml-3"> Mumbai Office</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 right-card">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card one">
+                                        <h6>1</h6>
+                                        <p>New</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <div class="card two">
+                                        <h6>3</h6>
+                                        <p>Interviewed</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card three">
+                                        <h6>2</h6>
+                                        <p>In Review</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card four">
+                                        <h6>1</h6>
+                                        <p>Offered</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mt-1" style="padding: 0; color: #838383;">
+                        <p>
+                            <!-- <img src="./assets/img/shared-with.png" alt="shared with" width="20"> -->
+                        <div id="circles">
+                            Shared with
+                            <div class="circle one"></div>
+                            <div class="circle two"></div>
+                            <div class="circle three"></div>
+                            <span class="three-others"> +3 Others</span>
+                        </div>
+                        </p>
+                        <div class="bottom-sketech">
+                            <p class="mt-1">
+                                <span>Sketch App</span>
+                                <span>Figma</span>
+                                <span>Illustrator</span>
+                                <!-- <span>Photoshop</span> -->
+                            </p>
+                            <p class="user-centric">
+                                <span>User Centric Design</span>
+                                <!-- <span>Design Systems</span> -->
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-6">
+
+                <div class="card  p-3" onclick="window.location.href='dash-candidate-profile.html';"
+                    style="cursor: pointer;">
+                    <h4>Sr. UI Designer <span class="pull-right date-format m-2" style="color: #838383;">18-May-2020
+                        </span></h4>
+                    <hr style="margin-top: -1px; margin-bottom: 0.2rem;">
+                    <div class="row main-row">
+                        <div class="col-md-6">
+                            <p class="remote">
+                                <span><a href="">Remote</a></span>
+                                <span><a href="">Interviewing</a></span>
+                            </p>
+                            <div class="exp-location">
+                                <p><i class="fa fa-briefcase" aria-hidden="true"></i>
+                                    <span> 3+ Years</span>
+                                </p>
+                                <p class=" mt-2">
+                                    <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
+                                    <span class="ml-3"> Mumbai Office</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 right-card">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card one">
+                                        <h6>1</h6>
+                                        <p>New</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <div class="card two">
+                                        <h6>3</h6>
+                                        <p>Interviewed</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card three">
+                                        <h6>2</h6>
+                                        <p>In Review</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card four">
+                                        <h6>1</h6>
+                                        <p>Offered</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mt-1" style="padding: 0; color: #838383;">
+                        <p>
+                            <!-- <img src="./assets/img/shared-with.png" alt="shared with" width="20"> -->
+                        <div id="circles">
+                            Shared with
+                            <div class="circle one"></div>
+                            <div class="circle two"></div>
+                            <div class="circle three"></div>
+                            <span class="three-others"> +3 Others</span>
+                        </div>
+                        </p>
+                        <div class="bottom-sketech">
+                            <p class="mt-1">
+                                <span>Sketch App</span>
+                                <span>Figma</span>
+                                <span>Illustrator</span>
+                                <!-- <span>Photoshop</span> -->
+                            </p>
+                            <p class="user-centric">
+                                <span>User Centric Design</span>
+                                <!-- <span>Design Systems</span> -->
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <h4 style="color: #838383;">Candidates</h4>
+        <button class="pull-right btn view-all-two"> View All</button>
+        <div class="row candidates">
+            <div class="col-lg-4 col-md-6">
+                <div class="card  p-3" onclick="window.location.href='dash-candidate-details.html';"
+                    style="cursor: pointer;">
+                    <div class="row">
+                        <div class="col-md-12 information">
+                            <img class="candid-img" src="./assets/img/shared-with.png" alt="candidates">
+                            <div class="sub-info">
+                                <h4>Abhilash Krishnamurthy</h4>
+                                <p style="color: #838383;"> Sr. Designer, <span>Compay Name</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row jp-nagar">
+                        <div class="col-md-6">
+                            <p style="color: #838383; line-height: 1.2;">Jp Nagar, JW Apt <br>
+                                Banglore
+                            </p>
+                            <p class="mt-2"><a href="#" class="Interviewed">Interviewed</a></p>
+                            <div class="social-media mt-4">
+                                <p>
+                                    <span><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+                                        </a></span>
+                                    <span><a href=""><i class="fa fa-behance" aria-hidden="true"></i>
+                                        </a></span>
+                                    <span>
+                                        <a href=""><i class="fa fa-github-alt" aria-hidden="true"></i>
+                                        </a>
+                                    </span>
+                                    <span>
+                                        <a href=""><i class="fa fa-stack-overflow" aria-hidden="true"></i>
+                                        </a>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6  text-right">
+                            <div class="design-thinker">
+                                <span><a href="">Design Thinker</a></span>
+                                <span><a href="">Puntual</a></span> <br>
+                                <div style="margin-top: 6.2%;">
+                                    <span><a href="">Impressionalble</a></span>
+                                </div>
+                                <p class="invited-by mt-4">Invited by</p>
+                                <p class="shruti">Shruti from <span
+                                        style="color: #1BB7FA; font-weight: 500;">Fyndr</span>
+                                </p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card  p-3" onclick="window.location.href='dash-candidate-details.html';"
+                    style="cursor: pointer;">
+                    <div class="row">
+                        <div class="col-md-12 information">
+                            <img class="candid-img" src="./assets/img/shared-with.png" alt="candidates">
+                            <div class="sub-info">
+                                <h4>Abhilash Krishnamurthy</h4>
+                                <p style="color: #838383;"> Sr. Designer, <span>Compay Name</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row jp-nagar">
+                        <div class="col-md-6">
+                            <p style="color: #838383;line-height: 1.2;">Jp Nagar, JW Apt <br>
+                                Banglore
+                            </p>
+                            <p class="mt-2"><a href="#" class="Interviewed">Interviewed</a></p>
+                            <div class="social-media mt-4">
+                                <p>
+                                    <span><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+                                        </a></span>
+                                    <span><a href=""><i class="fa fa-behance" aria-hidden="true"></i>
+                                        </a></span>
+                                    <span>
+                                        <a href=""><i class="fa fa-github-alt" aria-hidden="true"></i>
+                                        </a>
+                                    </span>
+                                    <span>
+                                        <a href=""><i class="fa fa-stack-overflow" aria-hidden="true"></i>
+                                        </a>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6  text-right">
+                            <div class="design-thinker">
+                                <span><a href="">Design Thinker</a></span>
+                                <span><a href="">Puntual</a></span> <br>
+                                <div style="margin-top: 6.2%;">
+                                    <span><a href="">Impressionalble</a></span>
+                                </div>
+                                <p class="invited-by mt-4">Invited by</p>
+                                <p class="shruti">Shruti from <span
+                                        style="color: #1BB7FA; font-weight: 500;">Fyndr</span>
+                                </p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card  p-3" onclick="window.location.href='dash-candidate-details.html';"
+                    style="cursor: pointer;">
+                    <div class="row">
+                        <div class="col-md-12 information">
+                            <img class="candid-img" src="./assets/img/shared-with.png" alt="candidates">
+                            <div class="sub-info">
+                                <h4>Abhilash Krishnamurthy</h4>
+                                <p style="color: #838383;"> Sr. Designer, <span>Compay Name</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row jp-nagar">
+                        <div class="col-md-6">
+                            <p style="color: #838383; line-height: 1.2;">Jp Nagar, JW Apt <br>
+                                Banglore
+                            </p>
+                            <p class="mt-2"><a href="#" class="Interviewed">Interviewed</a></p>
+                            <div class="social-media mt-4">
+                                <p>
+                                    <span><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i>
+                                        </a></span>
+                                    <span><a href=""><i class="fa fa-behance" aria-hidden="true"></i>
+                                        </a></span>
+                                    <span>
+                                        <a href=""><i class="fa fa-github-alt" aria-hidden="true"></i>
+                                        </a>
+                                    </span>
+                                    <span>
+                                        <a href=""><i class="fa fa-stack-overflow" aria-hidden="true"></i>
+                                        </a>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6  text-right">
+                            <div class="design-thinker">
+                                <span><a href="">Design Thinker</a></span>
+                                <span><a href="">Puntual</a></span> <br>
+                                <div style="margin-top: 6.2%;">
+                                    <span><a href="">Impressionalble</a></span>
+                                </div>
+                                <p class="invited-by mt-4">Invited by</p>
+                                <p class="shruti">Shruti from <span
+                                        style="color: #1BB7FA; font-weight: 500;">Fyndr</span>
+                                </p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "290px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+</body>
+
+</html>

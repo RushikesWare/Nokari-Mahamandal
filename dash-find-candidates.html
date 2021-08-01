@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/dashboard_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+    <title>Naukri Mahamandal</title>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            
+            <button id="open" class="dot-menu btn bg-white" onclick="openNav()">
+                <i class="fa fa-bars" aria-hidden="true" style="font-size: 25px;"></i>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="./assets/img/logo.jpeg" alt="logo" width="100">
+            </a>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- <ul class="navbar-nav mr-auto ">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" style="border-top: 5px solid #008dc9;">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" style="border-top: 5px solid #ffffff;">Explore</a>
+                    </li>
+                </ul> -->
+            </div>
+            <div class="float-right right-side-button">
+                <label class="dropdown">
+
+                    <div class="dd-button">
+                        <img src="./assets/img/shared-with.png" alt="">
+                    </div>
+
+                    <input type="checkbox" class="dd-input" id="test">
+
+                    <ul class="dd-menu">
+                        <li class="dd-menu-devider">
+                            <a href="#">
+                                <i class="fa fa-user-circle-o" aria-hidden="true"></i> &nbsp;&nbsp;
+                                My Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-sign-out" aria-hidden="true"></i> &nbsp;&nbsp;
+                                Log Out
+                            </a>
+                        </li>
+                        <!-- <li class="divider"></li> -->
+                    </ul>
+
+                </label>
+                <button class="dot-menu btn bg-white">
+                    <img src="./assets/img/dots-menu.png" alt="dots-menu">
+                </button>
+
+            </div>
+
+        </nav>
+    </header>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="dashboard.html" class="active"> <i class="fa fa-desktop" aria-hidden="true"></i>
+            Dashboard</a>
+        <a href="dash-my-profile.html"> <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+            My Profile</a>
+        <a href="dash-manage-jobs.html"> <i class="fa fa-briefcase" aria-hidden="true"></i>
+            Manage Jobs</a>
+        <a href="dash-reports.html"><i class="fa fa-id-card" aria-hidden="true"></i>
+            Reports</a>
+        <a href="dash-post-new-job.html"><i class="fa fa-heart-o" aria-hidden="true"></i>
+            Post New Job</a>
+        <a href="dash-find-candidates.html"><i class="fa fa-user" aria-hidden="true"></i>
+            Find Candidates</a>
+        <a href="dash-manage-address.html"><i class="fa fa-map-marker" aria-hidden="true"></i>
+            Manage Address</a>
+        <a href="dash-change-password.html"><i class="fa fa-key" aria-hidden="true"></i>
+            Change Password</a>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d60530.6326313719!2d73.8525950164072!3d18.52146522129396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1614157178990!5m2!1sen!2sin"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+    <div class="container find-candidates my-4">
+        <div class="row">
+            <div class="col-md-3 mt-3">
+                <form class="find-candidates-form">
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <!-- <label for="JobDesigation">Job Desigation *</label> -->
+                            <input type="text " class=" form-control post-job-input" name="JobDesigation"
+                                id="JobDesigation" placeholder="Enter Locations" style="width: 100%;">
+                        </div>
+                        <div class="form-group col-md-12 my-3 text-center">
+                            <button class="btn btn-primary btn-lg btn-block" type="submit"
+                                style="    background: #008dc9;     padding: 5px;">Find</button>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <h6>LAST ACTIVITY</h6>
+                            <div class="form-check">
+                                <ul class="pl-3">
+                                    <li>
+                                        <input class="form-check-input" type="checkbox" id="lastHrs">
+                                        <label class="form-check-label" for="lastHrs">Last Hour</label>
+                                    </li>
+                                    <li>
+                                        <input class="form-check-input" type="checkbox" id="last24Hrs">
+                                        <label class="form-check-label" for="last24Hrs">Last 24 hours</label>
+                                    </li>
+                                    <li>
+                                        <input class="form-check-input" type="checkbox" id="last7day">
+                                        <label class="form-check-label" for="last7day">Last 7 Days</label>
+                                    </li>
+                                    <li>
+                                        <input class="form-check-input" type="checkbox" id="last14Day">
+                                        <label class="form-check-label" for="last14Day">Last 14 Days</label>
+                                    </li>
+                                    <li>
+                                        <input class="form-check-input" type="checkbox" id="last30Day">
+                                        <label class="form-check-label" for="last30Day">Last 30 Days</label>
+                                    </li>
+                                    <li>
+                                        <input class="form-check-input" type="checkbox" id="last hrs">
+                                        <label class="form-check-label" for="last hrs">Last Hour</label>
+                                    </li>
+                                    <li>
+                                        <input class="form-check-input" type="checkbox" id="all">
+                                        <label class="form-check-label" for="all">All</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <div class="panel-group" id="accordionGroupClosed" role="tablist"
+                                aria-multiselectable="true">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingOne">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse"
+                                                data-parent="#accordionGroupClosed" href="#collapseCloseOne"
+                                                aria-expanded="true" aria-controls="collapseCloseOne">
+                                                Industry
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseCloseOne" class="panel-collapse collapse" role="tabpanel"
+                                        aria-labelledby="headingOne">
+                                        <div class="panel-body">
+                                            <ul class="check-list">
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox" id="Agriculture">
+                                                    <label class="form-check-label"
+                                                        for="Agriculture">Agriculture</label>
+                                                </li>
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox" id="Automobile">
+                                                    <label class="form-check-label" for="Automobile">Automobile</label>
+                                                </li>
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox" id="Advertising">
+                                                    <label class="form-check-label"
+                                                        for="Advertising">Advertising</label>
+                                                </li>
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox" id="Airlines">
+                                                    <label class="form-check-label" for="Airlines">Airlines</label>
+                                                </li>
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox" id="Chemicals">
+                                                    <label class="form-check-label" for="Chemicals">Chemicals</label>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingTwo">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse"
+                                                data-parent="#accordionGroupClosed" href="#collapseCloseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                Gender
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseCloseTwo" class="panel-collapse collapse" role="tabpanel"
+                                        aria-labelledby="headingTwo">
+                                        <div class="panel-body">
+                                            <ul class="check-list">
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox" id="Male">
+                                                    <label class="form-check-label" for="Male">Male</label>
+                                                </li>
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox" id="Female">
+                                                    <label class="form-check-label" for="Female">Female</label>
+                                                </li>
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox" id="Other">
+                                                    <label class="form-check-label" for="Other">Other</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingThree">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse"
+                                                data-parent="#accordionGroupClosed" href="#collapseCloseThree"
+                                                aria-expanded="false" aria-controls="collapseThree">
+                                                Experience
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseCloseThree" class="panel-collapse collapse" role="tabpanel"
+                                        aria-labelledby="headingThree">
+                                        <div class="panel-body">
+                                            <ul class="check-list">
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox" id="Fresher">
+                                                    <label class="form-check-label" for="Fresher">Fresher</label>
+                                                </li>
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="less-than-1-year">
+                                                    <label class="form-check-label" for="less-than-1-year">Less than 1
+                                                        Year</label>
+                                                </li>
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox" id="2-Year">
+                                                    <label class="form-check-label" for="2 Year">2 Years</label>
+                                                </li>
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox" id="3-Year">
+                                                    <label class="form-check-label" for="3-Year">3 Years</label>
+                                                </li>
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox" id="4-Year">
+                                                    <label class="form-check-label" for="4-Year">4 Years</label>
+                                                </li>
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox" id="5-Year">
+                                                    <label class="form-check-label" for="5-Year">5 Years</label>
+                                                </li>
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox" id="6-Year">
+                                                    <label class="form-check-label" for="6-Year">6 Years</label>
+                                                </li>
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox" id="7-Year">
+                                                    <label class="form-check-label" for="7-Year">7 Years</label>
+                                                </li>
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox" id="8-Year">
+                                                    <label class="form-check-label" for="8-Year">8 Years</label>
+                                                </li>
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox" id="10-Year">
+                                                    <label class="form-check-label" for="10-Year">10 Years</label>
+                                                </li>
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox" id="12-Year">
+                                                    <label class="form-check-label" for="12-Year">12 Years</label>
+                                                </li>
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox" id="15-Year">
+                                                    <label class="form-check-label" for="15-Year">15 Years +</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingFour">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse"
+                                                data-parent="#accordionGroupClosed" href="#collapseCloseFour"
+                                                aria-expanded="false" aria-controls="collapseFour">
+                                                Qualification
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseCloseFour" class="panel-collapse collapse" role="tabpanel"
+                                        aria-labelledby="headingFour">
+                                        <div class="panel-body">
+                                            <ul class="check-list">
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox" id="Xth">
+                                                    <label class="form-check-label" for="Xth">Below Class X th</label>
+                                                </li>
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox" id="Class-X-th">
+                                                    <label class="form-check-label" for="Class-X-th">Class X th</label>
+                                                </li>
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox" id="Class-XII-th">
+                                                    <label class="form-check-label" for="Class-XII-th">Class XII
+                                                        th</label>
+                                                </li>
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox" id="Diploma">
+                                                    <label class="form-check-label" for="Diploma">Diploma</label>
+                                                </li>
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox" id="Graduation">
+                                                    <label class="form-check-label" for="Graduation">Graduation</label>
+                                                </li>
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="Master/Post-Graduation">
+                                                    <label class="form-check-label"
+                                                        for="Master/Post-Graduation">Master/Post-Graduation</label>
+                                                </li>
+                                                <li>
+                                                    <input class="form-check-input" type="checkbox" id="Other">
+                                                    <label class="form-check-label" for="Other">Other</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-9 mt-3">
+                <div class="find-candidates-card">
+                    <div class="card p-3 mb-4 candidate-iiformation">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <img class="candidate-pic" src="./assets/img/shared-with.png" alt="candiadte">
+                            </div>
+                            <div class="col-md-9">
+                                <p>
+                                    <a href="#" class="candidate-name">SHRADHA DINKAR SURYAWANSHI</a>&nbsp;&nbsp;&nbsp;
+                                    <span style="color: rgb(184, 184, 184);">|</span>
+                                    <span style="color: #008dc9;">
+                                        &nbsp;&nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp;
+                                        Kolhapur
+                                    </span>
+                                </p>
+                                <p class="exp-and-package">
+                                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                    &nbsp;&nbsp;&nbsp; <span>2 Years 6 Months</span>&nbsp; <span
+                                        style="color: rgb(184, 184, 184);">|</span>
+                                    &nbsp;&nbsp;<i class="fa fa-money" aria-hidden="true"></i>
+
+                                    &nbsp;&nbsp; <i class="fa fa-inr" aria-hidden="true"></i> 10 Lac p.a min
+                                    &nbsp;&nbsp; <span style="color: rgb(184, 184, 184);">|</span> &nbsp;&nbsp;
+                                    <span>Modified on</span>
+                                </p>
+                                <p class="pref-loc">
+                                    Pref Loc : <span>Sangli</span>,
+                                </p>
+                                <p class="industry">
+                                    Industry : <span>IT</span>
+                                </p>
+                                <p class="skills">
+                                    Skills : <span> Auto-CAD, solid works,</span>
+                                </p>
+                                <p class="short-info">
+                                    Info : <span>Experienced candidate with 1 year and 0 months experience living in
+                                        Pune </span>
+                                    <a href="#">...Read more</a>
+                                </p>
+                            </div>
+                            <div class="col-md-1">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card p-3 mb-4 candidate-iiformation">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <img class="candidate-pic" src="./assets/img/shared-with.png" alt="candiadte">
+                            </div>
+                            <div class="col-md-9">
+                                <p>
+                                    <a href="#" class="candidate-name">SHRADHA DINKAR SURYAWANSHI</a>&nbsp;&nbsp;&nbsp;
+                                    <span style="color: rgb(184, 184, 184);">|</span>
+                                    <span style="color: #008dc9;">
+                                        &nbsp;&nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp;
+                                        Kolhapur
+                                    </span>
+                                </p>
+                                <p class="exp-and-package">
+                                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                    &nbsp;&nbsp;&nbsp; <span>2 Years 6 Months</span>&nbsp; <span
+                                        style="color: rgb(184, 184, 184);">|</span>
+                                    &nbsp;&nbsp;<i class="fa fa-money" aria-hidden="true"></i>
+
+                                    &nbsp;&nbsp; <i class="fa fa-inr" aria-hidden="true"></i> 10 Lac p.a min
+                                    &nbsp;&nbsp; <span style="color: rgb(184, 184, 184);">|</span> &nbsp;&nbsp;
+                                    <span>Modified on</span>
+                                </p>
+                                <p class="pref-loc">
+                                    Pref Loc : <span>Sangli</span>,
+                                </p>
+                                <p class="industry">
+                                    Industry : <span>IT</span>
+                                </p>
+                                <p class="skills">
+                                    Skills : <span> Auto-CAD, solid works,</span>
+                                </p>
+                                <p class="short-info">
+                                    Info : <span>Experienced candidate with 1 year and 0 months experience living in
+                                        Pune </span>
+                                    <a href="#">...Read more</a>
+                                </p>
+                            </div>
+                            <div class="col-md-1">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer style="background: white;" class="py-1 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="" class=" ft-color px-2">Advertising</a>
+                    <a href="" class=" ft-color px-2">Business</a>
+                    <a href="" class=" ft-color px-2">How search Works</a>
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-4 pull-right ">
+                    <a href="" class=" ft-color float-right px-2">Privacy</a>
+                    <a href="" class=" ft-color float-right px-2">Terms</a>
+                    <a href="" class=" ft-color float-right px-2">Setting</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "290px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+</body>
+
+</html>

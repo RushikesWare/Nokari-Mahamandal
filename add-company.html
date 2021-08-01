@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"> -->
+    <link rel="stylesheet" href="./assets/Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/ebfafc2eb8.js" crossorigin="anonymous"></script> -->
+    <title>Naukri Mahamandal</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <a class="navbar-brand" href="index.html">
+                <img src="./assets/img/logo.jpeg" width="100" alt="">
+                <!-- Nokari <br> Mahamandal -->
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item active pull-right">
+                        <a class="nav-link" href="">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            about us
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">about us</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">what we do</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Services
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">executive search</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">recruitment process outsoursing</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">strategic workforce consulting</a>
+                        </div>
+                    </li>
+                    <li class="nav-item active pull-right">
+                        <a class="nav-link" href="">benefits</a>
+                    </li>
+                    <li class="nav-item active pull-right">
+                        <a class="nav-link" href="">job fair</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            register
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">register company </a>
+                        </div>
+                    </li>
+                    <li class="nav-item active pull-right">
+                        <a class="nav-link" href="">contact us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="float-right add-nav-btn">
+                <button type="button" class="btn btn-primary px-4 sign-in"> Sign In</button>
+                <button type="button" class="btn btn-success px-4 post-job">Post New Job</button>
+                <button id="add-nav-dot" class="dot-menu btn " style="background: white;"><img src="./assets/img/dots-menu.png" alt="dots-menu"></button>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="container add-company">
+            <div class="row rowone">
+
+                <div class="col-md-12">
+                    <h3>Add Company Profile</h3>
+                    <div class="mb-5">
+                        <hr><br>
+                        <p> About Company :</p>
+                        
+                        <div class="row text-editor align-items-center justify-content-center ">
+                            <div class="col-md-12 col-lg-12">
+                                <div class="editor" id="editor-1">
+                                    <div class="toolbar">
+                                        <a href="#" data-command='undo' data-toggle="tooltip" data-placement="top"
+                                            title="Undo"><i class='fa fa-undo'></i></a>
+                                        <a href="#" data-command='redo' data-toggle="tooltip" data-placement="top"
+                                            title="Redo"><i class='fa fa-repeat'></i></a>
+                                        <a href="#" data-command='removeFormat' data-toggle="tooltip"
+                                            data-placement="top" title="Clear format"><i class='fa fa-times-circle'></i></a>
+
+                                        <div class="fore-wrapper"><i class='fa fa-font' data-toggle="tooltip"
+                                                data-placement="top" title="text color" style='color:#C96;'></i>
+                                            <div class="fore-palette">
+                                            </div>
+                                        </div>
+                                        <div class="back-wrapper"><i class='fa fa-font' data-toggle="tooltip"
+                                                data-placement="top" title="Background color"
+                                                style='background:#C96;'></i>
+                                            <div class="back-palette">
+                                            </div>
+                                        </div>
+                                        <a href="#" data-command='bold' data-toggle="tooltip" data-placement="top"
+                                            title="Bold"><i class='fa fa-bold'></i></a>
+                                        <a href="#" data-command='italic' data-toggle="tooltip" data-placement="top"
+                                            title="Italic"><i class='fa fa-italic'></i></a>
+                                        <a href="#" data-command='underline' data-toggle="tooltip" data-placement="top"
+                                            title="Underline"><i class='fa fa-underline'></i></a>
+                                        <a href="#" data-command='strikeThrough' data-toggle="tooltip"
+                                            data-placement="top" title="Stike through"><i
+                                                class='fa fa-strikethrough'></i></a>
+                                        <a href="#" data-command='justifyLeft' data-toggle="tooltip"
+                                            data-placement="top" title="Left align"><i class='fa fa-align-left'></i></a>
+                                        <a href="#" data-command='justifyCenter'><i class='fa fa-align-center'
+                                                data-toggle="tooltip" data-placement="top" title="Center align"></i></a>
+                                        <a href="#" data-command='justifyRight' data-toggle="tooltip"
+                                            data-placement="top" title="Right align"><i
+                                                class='fa fa-align-right'></i></a>
+                                        <a href="#" data-command='justifyFull' data-toggle="tooltip"
+                                            data-placement="top" title="Justify"><i class='fa fa-align-justify'></i></a>
+                                        <a href="#" data-command='indent' data-toggle="tooltip" data-placement="top"
+                                            title="Indent"><i class='fa fa-indent'></i></a>
+                                        <a href="#" data-command='outdent' data-toggle="tooltip" data-placement="top"
+                                            title="Outdent"><i class='fa fa-outdent'></i></a>
+                                        <a href="#" data-command='insertUnorderedList' data-toggle="tooltip"
+                                            data-placement="top" title="Unordered list"><i
+                                                class='fa fa-list-ul'></i></a>
+                                        <a href="#" data-command='insertOrderedList' data-toggle="tooltip"
+                                            data-placement="top" title="Ordered list"><i class='fa fa-list-ol'></i></a>
+                                        <a href="#" data-command='h1' data-toggle="tooltip" data-placement="top"
+                                            title="H1">H1</a>
+                                        <a href="#" data-command='h2' data-toggle="tooltip" data-placement="top"
+                                            title="H2">H2</a>
+                                        <a href="#" data-command='createlink' data-toggle="tooltip" data-placement="top"
+                                            title="Inser link"><i class='fa fa-link'></i></a>
+                                        <a href="#" data-command='unlink' data-toggle="tooltip" data-placement="top"
+                                            title="Unlink"><i class='fa fa-unlink'></i></a>
+                                        <a href="#" data-command='insertimage' data-toggle="tooltip"
+                                            data-placement="top" title="Insert image"><i class='fa fa-image'></i></a>
+                                        <a href="#" data-command='p' data-toggle="tooltip" data-placement="top"
+                                            title="Paragraph">P</a>
+                                        <a href="#" data-command='subscript' data-toggle="tooltip" data-placement="top"
+                                            title="Subscript"><i class='fa fa-subscript'></i></a>
+                                        <a href="#" data-command='superscript' data-toggle="tooltip"
+                                            data-placement="top" title="Superscript"><i
+                                                class='fa fa-superscript'></i></a>
+                                    </div>
+                                    <div id='editor' class="editorAria" contenteditable>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="">
+                        <!-- <div class="your-file angle-file">
+                            <input type="file" class="custom-file-input" id="file">
+                            <label class="custom-file-label Company-Logo" for="customFile">Company
+                                Logo</label>
+                        </div> -->
+                        <div class="field form-group col-md-6" align="left">
+                            <input type="file" class="form-control custom-file-input" id="files" name="files[]"/>
+                            <label for="file" class="custom-file-label Company-Logo" > Company Logo</label>
+                          </div>
+                        <div class="row text-left">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <!-- <label for="website">Website</label> -->
+                                    <input type="url" class="form-control" id="ownerName"
+                                        placeholder="Website must start with http:// or https://">
+                                </div>
+                                <div class="form-group">
+                                    <!-- <label for="ownerName">Owner Name*</label> -->
+                                    <input type="text" class="form-control" id="ownerName"
+                                        placeholder="Enter Name of your Company's Owner">
+                                </div>
+                                <div class="form-group">
+                                    <!-- <label for="contactNumber">Contact Number*</label> -->
+                                    <input type="tel" class="form-control" id="contactNumber"
+                                        placeholder="Enter Mobile Number">
+                                </div>
+                                <div class="form-group">
+                                    <!-- <label for="landlineNumber">Landline Number*</label> -->
+                                    <input type="text" class="form-control" id="landlineNumber"
+                                        placeholder="Enter Landline Number">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <!-- <label for="contactPerson">Contact Person*</label> -->
+                                    <input type="text" class="form-control" id="contactPerson"
+                                        placeholder="Enter Name of Contact Person">
+                                </div>
+                                <div class="form-group">
+                                    <!-- <label for="designation">Designation</label> -->
+                                    <input type="text" class="form-control" id="Ddesignation"
+                                        placeholder="Enter Designation of Contact Person">
+                                </div>
+                                <div class="form-group">
+                                    <!-- <label for="contactPersonMobNo">Contact Person Mobile Number*</label> -->
+                                    <input type="tel" class="form-control" id="contactPersonMobNo"
+                                        placeholder="Enter Contact Person Mobile Number">
+                                </div>
+                                <div class="form-group">
+                                    <!-- <label for="contactPersonEmail">Contact Person Email Address</label> -->
+                                    <input type="email" class="form-control" id="contactPersonEmail"
+                                        placeholder="Enter Contact Person Email Id">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <button class="btn" id="btnsave"  onclick="window.location.href='address-details-of-company.html';">Save & Continue</button> -->
+                        <a class="btn" id="btnsave"  href="./address-details-of-company.html"> Save & Continue</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <div class="field" align="left">
+        <h3>Upload your images</h3>
+        <input type="file" id="files" name="files[]" multiple />
+      </div> -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
+
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+        $(document).ready(function () {
+            var colorPalette = ['000000', 'FF9966', '6699FF', '99FF66', 'CC0000', '00CC00', '0000CC', '333333', '0066FF', 'FFFFFF'],
+                forePalette = $('.fore-palette'),
+                backPalette = $('.back-palette'),
+                editor = $('.editor');
+
+            for (var i = 0; i < colorPalette.length; i++) {
+                forePalette.append('<a href="#" data-command="foreColor" data-value="' + '#' + colorPalette[i] + '" style="background-color:' + '#' + colorPalette[i] + ';" class="palette-item"></a>');
+                backPalette.append('<a href="#" data-command="backColor" data-value="' + '#' + colorPalette[i] + '" style="background-color:' + '#' + colorPalette[i] + ';" class="palette-item"></a>');
+            }
+            $('.toolbar a').click(function (e) {
+                e.preventDefault();
+                var command = $(this).data('command');
+                if (command == 'h1' || command == 'h2' || command == 'p') {
+                    document.execCommand('formatBlock', false, command);
+                }
+                if (command == 'foreColor' || command == 'backColor') {
+                    var color = $(this).data('value');
+                    document.execCommand($(this).data('command'), false, color);
+                    alert(color);
+                }
+                if (command == 'removeFormat') {
+                    document.execCommand('removeFormat', false, command);
+                }
+                if (command == 'createlink' || command == 'insertimage') {
+                    url = prompt('Enter the link here: ', 'http:\/\/');
+                    console.log(command + " " + url);
+                    document.execCommand($(this).data('command'), false, url);
+                    // document.execCommand($(this).data('command') && 'enableObjectResizing', false, url);
+                } else document.execCommand($(this).data('command'), false, url);
+            });
+            $('.editorAria img').click(function () {
+                document.execCommand('enableObjectResizing', false);
+            });
+            $("#getHTML").click(function () {
+                var editorId = $(this).attr('get-data');
+                var html = $("#" + editorId).find('.editorAria').html();
+                alert(html);
+            });
+        });
+    </script>
+
+    <script>
+        // for File
+        $(document).ready(function() {
+  if (window.File && window.FileList && window.FileReader) {
+    $("#files").on("change", function(e) {
+      var files = e.target.files,
+        filesLength = files.length;
+      for (var i = 0; i < filesLength; i++) {
+        var f = files[i]
+        var fileReader = new FileReader();
+        fileReader.onload = (function(e) {
+          var file = e.target;
+          $("<span class=\"pip\">" +
+            "<img class=\"imageThumb\" src=\"" + e.target.result + "\" title=\"" + file.name + "\"/>" +
+            "<br/><span class=\"remove\">Remove image</span>" +
+            "</span>").insertAfter("#files");
+          $(".remove").click(function(){
+            $(this).parent(".pip").remove();
+          });
+          
+          // Old code here
+          /*$("<img></img>", {
+            class: "imageThumb",
+            src: e.target.result,
+            title: file.name + " | Click to remove"
+          }).insertAfter("#files").click(function(){$(this).remove();});*/
+          
+        });
+        fileReader.readAsDataURL(f);
+      }
+    });
+  } else {
+    alert("Your browser doesn't support to File API")
+  }
+});
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

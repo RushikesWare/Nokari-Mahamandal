@@ -1,0 +1,80 @@
+* {
+    margin:0;
+    padding:0;
+}
+p{
+    margin-bottom: unset;
+}
+html,body{
+    background-color: #F2F2F2;
+    color: rgb(58, 58, 58);
+    font-family:'Montserrat', Times, serif !important;
+
+  }
+  .dot-menu img{
+    width: 26px;
+  }
+  header{
+      background: #fff;
+  }
+  header a{
+      color: black;
+  }
+
+  .sign-in-form input{
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 20%);
+  border-radius: 3rem;
+}
+  .container {
+    padding: 2rem 0rem;
+  }
+  
+  @media (min-width: 576px){
+    .modal-dialog {
+      max-width: 400px;
+    }
+    .modal-dialog .modal-content {
+        padding: 1rem;
+      }
+  }
+  
+  .modal-header.close{ 
+      margin-top: -1.5rem;
+    
+  }
+  
+  .form-title {
+    margin: -2rem 0rem 1rem;
+  }
+  
+  .btn-round {
+    border-radius: 3rem;
+  }
+  
+  .delimiter {
+    padding: 1rem;  
+  }
+  
+  .social-buttons .btn{
+      margin: 0 0.5rem 1rem;
+  }
+  
+  .signup-section {
+    padding: 0.3rem 0rem;
+  }
+.btn-primary {
+    color: #fff;
+    background-color: #008DC9;
+    border-color: #008DC9;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #008DC9;
+    border-color: #008DC9;
+}
+.logo-modal{
+    width: 55%;
+}
+.text-info{
+    color: #5CB95E;
+}
